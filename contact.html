@@ -3,21 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <title>Contact</title>
   </head>
   <body>
+
     <div class="home">
       <header>
         <h1>Lisa Fujita</h1>
         <nav>
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
-          <a href="portfolio.html">Portfolio</a>
+          <a href="portfolio.html">Projects</a>
           <a href="contact.html">Contact</a>
         </nav>
       </header>
-      <form action="success.html">
+      <div class="form-container">
+        <form action="success.html">
         <label for="first-name">First Name:</label>
         <input type="text" placeholder="John" id="first-name" name="first-name">
         <label for="last-name">Last Name:</label>
@@ -25,12 +28,14 @@
 <label for="email">Email:</label>
 <input type="text" placeholder="example@email.com" id="email" name="email" ><br><br>
 <label for="message">Message:</label><br>
-<textarea name="message" id="message"></textarea><br>
+<textarea name="message" id="message"></textarea><br><br>
 <input type="submit" id="submit" name="submit">
       </form>
+    </div>
+      <div class="form-shadow"></div>
     <footer>
       <a href="mailto:lisafujita90@gmail.com"
-        ><img src="img/email.svg" alt="e-mail"
+        ><img src="img/gmail.svg" alt="e-mail"
       /></a>
       <a href="https://www.linkedin.com/in/lisa-fujita/" target="_blank"
         ><img src="img/linkedin.svg" alt="linked-in"
