@@ -204,9 +204,9 @@ textarea {
   padding: 20vh;
 }
 
-.project-container {
+/* .project-container {
   margin-top: 20vh;
-  width: 1000px;
+  width: 850px;
   height: 500px;
   display: flex;
   justify-content: center;
@@ -216,7 +216,7 @@ textarea {
 .project-one,
 .project-two,
 .project-three {
-  width: 20%;
+  width: 30%;
   height: 110%;
   border-radius: 10px;
   border: 2px solid #9ca3af;
@@ -239,9 +239,8 @@ textarea {
 
 .journal-img,
 .loading-img {
-  width: 196px;
+  width: 251px;
   height: 120px
-  /* height: 250px; */
   object-fit: cover;
   border-radius: 10px 10px 0 0;
 }
@@ -249,15 +248,15 @@ textarea {
 .project-one:hover,
 .project-two:hover,
 .project-three:hover {
-  width: 45%;
+  width: 50%;
   overflow: auto;
 }
 
 .project-one:hover .journal-img,
 .project-two:hover .loading-img,
 .project-three:hover .loading-img {
-  width: 100%; /* Keep the image width constrained */
-  height: auto; /* Maintain aspect ratio without growing too big */
+  width: 100%; 
+  height: auto; 
 }
 
 .project-one:hover .journal-project,
@@ -265,4 +264,87 @@ textarea {
 .project-three:hover .loading-two {
   background-color: #6b7280; 
  
+} */
+
+.project-container {
+  margin-top: 20vh;
+  width: 850px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-one,
+.project-two,
+.project-three {
+  width: 30%;
+  height: 110%;
+  border-radius: 10px;
+  border: 2px solid #9ca3af;
+  background-color: #6b7280;
+  transition: all ease-in-out 1.5s;
+  overflow: hidden;
+  position: relative;
+}
+
+.journal-project p,
+.loading-one p,
+.loading-two p {
+  display: none;
+}
+
+.journal-img,
+.loading-img {
+  display: none;
+}
+
+.journal-project::before,
+.loading-one::before,
+.loading-two::before {
+  content: 'One Day At A Time';
+  font-size: 50px;
+  color: #e5e7eb;
+  position: absolute;
+  top: 50%; /* Move the element 50% down */
+  left: 50%; /* Move the element 50% to the right */
+  transform: translate(-50%, -50%); /* Center it */
+  text-align: center;
+  width: 100%; /* Ensure it takes the full width */
+}
+
+.loading-one::before,
+.loading-two::before {
+  content: 'Coming Soon...';
+}
+
+.project-one:hover .journal-project::before,
+.project-two:hover .loading-one::before,
+.project-three:hover .loading-two::before {
+  display: none; /* Hide the centered text on hover */
+}
+
+.project-one:hover,
+.project-two:hover,
+.project-three:hover {
+  width: 50%;
+  background-color: #6b7280;
+  overflow: auto;
+}
+
+.project-one:hover .journal-project p,
+.project-two:hover .loading-one p,
+.project-three:hover .loading-two p {
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+.project-one:hover .journal-img,
+.project-two:hover .loading-img,
+.project-three:hover .loading-img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
