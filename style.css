@@ -152,6 +152,10 @@ img {
   width: 65px;
 }
 
+.bottom-footer {
+  margin: 0 50px;
+}
+
 footer {
   position: fixed;
   bottom: 0;
