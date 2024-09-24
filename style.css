@@ -6,11 +6,21 @@
 
 body {
   color: #e5e7eb;
+  /* background-color: #1f2126; 
+  background-image: linear-gradient(to right, #ffffff 1px, transparent 1px),
+    linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+  background-size: 70px 70px;  */
   background-image: url(img/grid.jpg);
-  max-width: 850px;
-  margin: 0 auto;
+  /* max-width: 850px;
+  margin: 0 auto; */
   font-family: Gowun Batang, sans-serif;
   font-size: 25px;
+}
+
+.home {
+  max-width: 850px;
+  height: 500px;
+  margin: 0 auto;
 }
 
 header {
@@ -61,8 +71,8 @@ a {
 }
 
 .form-shadow {
-  height: 480px;
-  transform: translateX(-25px) translateY(-450px);
+  height: 450px;
+  transform: translateX(-25px) translateY(-420px);
 }
 
 .steve {
@@ -73,7 +83,7 @@ a {
 
 .self-img {
   border-radius: 50%;
-  width: 300px;
+  width: 220px;
   border: 3px solid #e5e7eb;
   position: relative;
   z-index: 2;
@@ -85,9 +95,10 @@ p {
 }
 
 .flex-container {
-  margin-top: 180px;
+  margin: 0 auto;
+  margin-top: 150px;
   max-width: 850px;
-  height: 850px;
+  height: 500px;
   display: flex;
   justify-content: center;
   gap: 90px;
@@ -96,7 +107,9 @@ p {
 .about-container,
 .emma-container,
 .film-container {
-  width: 400px;
+  width: 382px;
+  height: 500px;
+  /* width: 400px; */
   /* flex: 0 0 90%; */
   /* margin-right: -300px; */
 }
@@ -109,6 +122,7 @@ p {
   margin-top: -7px;
   padding: 10px;
   font-size: 15px;
+  text-align: center;
   width: 382px;
   height: 250px;
   overflow: auto;
@@ -283,7 +297,7 @@ textarea {
 .project-two,
 .project-three {
   width: 30%;
-  height: 110%;
+  /* height: 110%; */
   border-radius: 10px;
   border: 2px solid #9ca3af;
   background-color: #6b7280;
@@ -351,4 +365,65 @@ textarea {
   display: block;
   width: 100%;
   height: auto;
+}
+
+@media (max-width: 1024px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    width: 1024px;
+  }
+
+  .home-div {
+    margin-top: 20vh;
+  }
+
+  .self-img {
+    transform: translateX(600px) translateY(350px);
+  }
+
+  nav {
+    transform: translateX(-80px);
+  }
+
+  a {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+
+  .flex-container {
+    margin-top: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10vh;
+  }
+
+  .about-me,
+  .about-emma,
+  .about-film {
+    width: 400px;
+    height: 250px;
+  }
+
+  .code-img,
+  .emma-img,
+  .film-img {
+    width: 400px;
+    height: 250px;
+  }
+
+  .about-shadow {
+    background-color: #d1d5db;
+    border-radius: 10px;
+    width: 400px;
+    height: 500px;
+    transform: translateX(-20px) translateY(-480px);
+  }
+
+  footer {
+    width: 1024px;
+  }
 }
